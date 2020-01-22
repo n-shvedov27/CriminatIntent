@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+<manifest
+    xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.bignerdranch.android.criminatintent">
 
     <application
@@ -18,7 +19,11 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".CrimePagerActivity" />
+        <activity
+            android:parentActivityName=".CrimeListActivity"
+            android:label="@string/app_name"
+            android:name=".CrimePagerActivity">
+        </activity>
     </application>
 
 </manifest>

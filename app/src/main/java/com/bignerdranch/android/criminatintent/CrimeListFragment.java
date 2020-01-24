@@ -84,6 +84,10 @@ public class CrimeListFragment extends Fragment {
             holder.bindCrime(crime);
         }
 
+        public void setCrimes(List<Crime> crimes){
+            this.crimes = crimes;
+        }
+
         @Override
         public int getItemCount() {
             return crimes.size();
@@ -112,6 +116,7 @@ public class CrimeListFragment extends Fragment {
             crimeRecyclerView.setAdapter(adapter);
         }
         else {
+            adapter.setCrimes(crimes);
             adapter.notifyDataSetChanged();
         }
 
